@@ -13,14 +13,14 @@ ${data.description}
     
 ## Table of Contents
     
-[${data.contentTable[0]}](#${data.contentTable[0]})
-[${data.contentTable[1]}](#${data.contentTable[1]})
-[${data.contentTable[2]}](#${data.contentTable[2]})
-[${data.contentTable[3]}](#${data.contentTable[3]})
-[${data.contentTable[4]}](#${data.contentTable[4]})
-[${data.contentTable[5]}](#${data.contentTable[5]})
-[${data.contentTable[6]}](#${data.contentTable[6]})
-[${data.contentTable[7]}](#${data.contentTable[7]})
+[${data.contentTable[0]}](#${data.contentTable[0]})\n
+[${data.contentTable[1]}](#${data.contentTable[1]})\n
+[${data.contentTable[2]}](#${data.contentTable[2]})\n
+[${data.contentTable[3]}](#${data.contentTable[3]})\n
+[${data.contentTable[4]}](#${data.contentTable[4]})\n
+[${data.contentTable[5]}](#${data.contentTable[5]})\n
+[${data.contentTable[6]}](#${data.contentTable[6]})\n
+[${data.contentTable[7]}](#${data.contentTable[7]})\n
 
 ## Installation
 
