@@ -1,6 +1,8 @@
+// packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+// Readme format function
 function readmeOutput (data) {
     return `
 # ${data.title}
@@ -39,6 +41,7 @@ ${data.email}
 [GitHub URL](${data.github})`
 }
 
+// inquire prompt user input questions
 inquirer.prompt([
     {
         type: 'input',
@@ -92,6 +95,7 @@ inquirer.prompt([
     },
 ])
 
+// write readme file
 .then((response) => {
     fs.writeFile('README.md', readmeOutput(response), (error) => {});
 });
