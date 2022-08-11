@@ -13,8 +13,15 @@ ${data.description}
     
 ## Table of Contents
     
-${data.contentTable}
-    
+[${data.contentTable[0]}](#${data.contentTable[0]})
+[${data.contentTable[1]}](#${data.contentTable[1]})
+[${data.contentTable[2]}](#${data.contentTable[2]})
+[${data.contentTable[3]}](#${data.contentTable[3]})
+[${data.contentTable[4]}](#${data.contentTable[4]})
+[${data.contentTable[5]}](#${data.contentTable[5]})
+[${data.contentTable[6]}](#${data.contentTable[6]})
+[${data.contentTable[7]}](#${data.contentTable[7]})
+
 ## Installation
 
 ${data.installation}
@@ -38,7 +45,7 @@ ${data.tests}
 ## Questions?
 
 ${data.email}
-[GitHub URL](${data.github})`
+[${data.github}](${data.github})`
 }
 
 // inquire prompt user input questions
@@ -54,9 +61,13 @@ inquirer.prompt([
         message: 'Please describe your project.',
     },
     {
-        type: 'input',
+        type: 'checkbox',
         name: 'contentTable',
         message: 'Table of Contents',
+        choices: ['title', 'description',
+        'installation', 'usage',
+        'license', 'contributing', 'tests',
+        'question'],
     },
     {
         type: 'input',
@@ -69,9 +80,15 @@ inquirer.prompt([
         message: 'Please list usage instructions.',
     },
     {
-        type: 'checkboxinput',
+        type: 'checkbox',
         name: 'license',
         message: 'Please select a license.',
+        // lines 76-79 taken from lines 113-116 from https://github.com/JohnBanas/professional-README-generator/blob/main/index.js
+        // credit - JohnBana
+        choices: ['GNU AGPLv3', 'GNU GPLv3',
+        'GNU LGPLv3', 'Mozilla Public License 2.0',
+        'Apache License 2.0', 'MIT License', 'Boost Software License 1.0',
+        'The Unlicense'],
     },
     {
         type: 'input',
