@@ -3,23 +3,39 @@ const fs = require('fs');
 
 function readmeOutput (data) {
     return `
-    $(data.title)
+# $(data.title)
     
-    $(data.description)
+## Description
     
-    $(data.contentTable)
+$(data.description)
     
-    $(data.installation)
+## Table of Contents
     
-    $(data.usage)
+$(data.contentTable)
     
-    $(data.license)
+## Installation
 
-    $(data.contributing)
+$(data.installation)
     
-    $(data.tests)
+## Usage
     
-    $(data.questions)`
+$(data.usage)
+    
+## License 
+
+$(data.license)
+
+## Contributing
+
+$(data.contributing)
+    
+## Tests
+
+$(data.tests)
+    
+## Questions?
+
+$(data.questions)`
 }
 
 inquirer.prompt([
@@ -69,3 +85,7 @@ inquirer.prompt([
         message: 'Contact Information:',
     },
 ])
+
+.then((response) => {
+    fs.writeFile('README.md', readmeOutput(response), (error) => {});
+});
