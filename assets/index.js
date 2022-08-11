@@ -4,6 +4,11 @@ const fs = require('fs');
 
 // Readme format function
 function readmeOutput (data) {
+    for (let i = 0; i < 8; i++) {
+        if (!data.contentTable[i]) {
+            data.contentTable[i] = "";
+        }
+    }
     return `
 # ${data.title}
     
