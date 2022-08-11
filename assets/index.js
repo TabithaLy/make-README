@@ -3,39 +3,40 @@ const fs = require('fs');
 
 function readmeOutput (data) {
     return `
-# $(data.title)
+# ${data.title}
     
 ## Description
     
-$(data.description)
+${data.description}
     
 ## Table of Contents
     
-$(data.contentTable)
+${data.contentTable}
     
 ## Installation
 
-$(data.installation)
+${data.installation}
     
 ## Usage
     
-$(data.usage)
+${data.usage}
     
 ## License 
 
-$(data.license)
+${data.license}
 
 ## Contributing
 
-$(data.contributing)
+${data.contributing}
     
 ## Tests
 
-$(data.tests)
+${data.tests}
     
 ## Questions?
 
-$(data.questions)`
+${data.email}
+[GitHub URL](${data.github})`
 }
 
 inquirer.prompt([
@@ -81,8 +82,13 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        name: 'question',
-        message: 'Contact Information:',
+        name: 'email',
+        message: 'Email:',
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'GitHub URL:',
     },
 ])
 
