@@ -1,0 +1,23 @@
+{
+  "name": "make-readme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TabithaLy/make-README.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TabithaLy/make-README/issues"
+  },
+  "homepage": "https://github.com/TabithaLy/make-README#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
