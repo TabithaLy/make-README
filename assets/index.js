@@ -64,10 +64,10 @@ inquirer.prompt([
         type: 'checkbox',
         name: 'contentTable',
         message: 'Table of Contents',
-        choices: ['title', 'description',
+        choices: ['description',
         'installation', 'usage',
         'license', 'contributing', 'tests',
-        'question'],
+        'email', 'github'],
     },
     {
         type: 'input',
@@ -83,8 +83,8 @@ inquirer.prompt([
         type: 'checkbox',
         name: 'license',
         message: 'Please select a license.',
-        // lines 76-79 taken from lines 113-116 from https://github.com/JohnBanas/professional-README-generator/blob/main/index.js
-        // credit - JohnBana
+        // lines 76-79 taken from lines 113-116 from:
+        // https://github.com/JohnBanas/professional-README-generator/blob/main/index.js
         choices: ['GNU AGPLv3', 'GNU GPLv3',
         'GNU LGPLv3', 'Mozilla Public License 2.0',
         'Apache License 2.0', 'MIT License', 'Boost Software License 1.0',
