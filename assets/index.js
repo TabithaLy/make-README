@@ -78,7 +78,7 @@ ${data.tests}
     
 ## Questions?
 
-${data.email} \n
+${data.email}\n
 [${data.github}](${data.github})`
 }
 
