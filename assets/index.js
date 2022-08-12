@@ -9,6 +9,37 @@ function readmeOutput (data) {
             data.contentTable[i] = "";
         }
     }
+    for (let j = 0; j < 8; j++) {
+        if (!data.license[j]) {
+            data.license[j] = "";
+        }
+        switch (j) {
+            case (data.license[0]):
+                data.license[0] = "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
+            break;
+            case (data.license[1]):
+                data.license[1] = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+            break;
+            case (data.license[2]):
+                data.license[2] = "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
+            break;
+            case (data.license[3]):
+                data.license[3] = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+            break;
+            case (data.license[4]):
+                data.license[4] = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+            break;
+            case (data.license[5]):
+                data.license[5] = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+            break;
+            case (data.license[6]):
+                data.license[6] = "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
+            break;
+            case (data.license[7]):
+                data.license[7] = "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)";
+            break;
+        }
+    }
     return `
 # ${data.title}
     
@@ -37,7 +68,14 @@ ${data.usage}
     
 ## License 
 
-${data.license}
+${data.license[0]}
+${data.license[1]}
+${data.license[2]}
+${data.license[3]}
+${data.license[4]}
+${data.license[5]}
+${data.license[6]}
+${data.license[7]}
 
 ## Contributing
 
@@ -52,6 +90,7 @@ ${data.tests}
 ${data.email}
 [${data.github}](${data.github})`
 }
+
 
 // inquire prompt user input questions
 inquirer.prompt([

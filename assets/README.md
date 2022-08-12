@@ -9,19 +9,19 @@
     
 [description](#description)
 
+[installation](#installation)
+
 [usage](#usage)
+
+[license](#license)
 
 [contributing](#contributing)
 
+[tests](#tests)
+
 [email](#email)
 
-[](#)
-
-[](#)
-
-[](#)
-
-[](#)
+[github](#github)
 
 
 ## Installation
@@ -34,7 +34,14 @@
     
 ## License 
 
-GNU LGPLv3
+GNU AGPLv3
+
+
+
+
+
+
+
 
 ## Contributing
 
