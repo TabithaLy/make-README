@@ -26,11 +26,11 @@ description
 
 ## Installation
 
-instructions
+Installation
     
 ## Usage
     
-usage
+Usage
     
 ## License 
 
@@ -45,14 +45,14 @@ Apache License 2.0
 
 ## Contributing
 
-contribute
+Contribute
     
 ## Tests
 
-test
+Test
     
 ## Questions?
 
 spencersalmon.tabitha@gmail.com 
 
-[github](github)
+[https://github.com/TabithaLy](https://github.com/TabithaLy)
