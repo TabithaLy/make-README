@@ -4,44 +4,40 @@ const fs = require('fs');
 
 // Readme format function
 function readmeOutput (data) {
+    console.log(data.license);
     // control for if not selected
     for (let i = 0; i < 8; i++) {
         if (!data.contentTable[i]) {
             data.contentTable[i] = "";
         }
     }
-    for (let j = 0; j < 8; j++) {
-        if (!data.license[j]) {
-            data.license[j] = "";
-        }
-        // attempt at license - will come back to
-        switch (j) {
-            case (data.license[0]):
-                data.license[0] = "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
-            break;
-            case (data.license[1]):
-                data.license[1] = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-            break;
-            case (data.license[2]):
-                data.license[2] = "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
-            break;
-            case (data.license[3]):
-                data.license[3] = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
-            break;
-            case (data.license[4]):
-                data.license[4] = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
-            break;
-            case (data.license[5]):
-                data.license[5] = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-            break;
-            case (data.license[6]):
-                data.license[6] = "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
-            break;
-            case (data.license[7]):
-                data.license[7] = "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)";
-            break;
-        }
+    switch (data.license) {
+        case "GNU AGPLv3":
+            data.license = "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
+        break;
+        case "GNU GPLv3":
+            data.license = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+        break;
+        case "GNU LGPLv3":
+            data.license = "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
+        break;
+        case "Mozilla Public License 2.0":
+            data.license = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+        break;
+        case "Apache License 2.0":
+            data.license = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+        break;
+        case "MIT License":
+            data.license = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+        break;
+        case "Boost Software License 1.0":
+            data.license = "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
+        break;
+        case "The Unlicense":
+            data.license = "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)";
+        break;
     }
+    // attempt at license - will come back to
     return `
 # ${data.title}
     
@@ -51,14 +47,14 @@ ${data.description}
     
 ## Table of Contents
     
-[Description](#${data.contentTable[0]})\n
-[Installation](#${data.contentTable[1]})\n
-[Usage](#${data.contentTable[2]})\n
-[License](#${data.contentTable[3]})\n
-[Contributing](#${data.contentTable[4]})\n
-[Tests](#${data.contentTable[5]})\n
-[Email](#${data.contentTable[6]})\n
-[GitHub](#${data.contentTable[7]})\n
+[${data.contentTable[0].substring(0, 1).toUpperCase() + data.contentTable[0].substring(1)}](#${data.contentTable[0]})\n
+[${data.contentTable[1].substring(0, 1).toUpperCase() + data.contentTable[1].substring(1)}](#${data.contentTable[1]})\n
+[${data.contentTable[2].substring(0, 1).toUpperCase() + data.contentTable[2].substring(1)}](#${data.contentTable[2]})\n
+[${data.contentTable[3].substring(0, 1).toUpperCase() + data.contentTable[3].substring(1)}](#${data.contentTable[3]})\n
+[${data.contentTable[4].substring(0, 1).toUpperCase() + data.contentTable[4].substring(1)}](#${data.contentTable[4]})\n
+[${data.contentTable[5].substring(0, 1).toUpperCase() + data.contentTable[5].substring(1)}](#${data.contentTable[5]})\n
+[${data.contentTable[6].substring(0, 1).toUpperCase() + data.contentTable[6].substring(1)}](#${data.contentTable[6]})\n
+[${data.contentTable[7].substring(0, 1).toUpperCase() + data.contentTable[7].substring(1)}](#${data.contentTable[7]})\n
 
 ## Installation
 
@@ -70,14 +66,7 @@ ${data.usage}
     
 ## License 
 
-${data.license[0]}
-${data.license[1]}
-${data.license[2]}
-${data.license[3]}
-${data.license[4]}
-${data.license[5]}
-${data.license[6]}
-${data.license[7]}
+${data.license}
 
 ## Contributing
 
@@ -126,7 +115,7 @@ inquirer.prompt([
         message: 'Please list usage instructions.',
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'Please select a license.',
         // lines 76-79 taken from lines 113-116 from:

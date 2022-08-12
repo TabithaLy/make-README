@@ -1,9 +1,9 @@
 
-# title
+# 
     
 ## Description
     
-description
+
     
 ## Table of Contents
     
@@ -21,38 +21,31 @@ description
 
 [Email](#email)
 
-[GitHub](#github)
+[Github](#github)
 
 
 ## Installation
 
-Installation
+
     
 ## Usage
     
-Usage
+
     
 ## License 
 
-Apache License 2.0
-
-
-
-
-
-
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Contributing
 
-Contribute
+
     
 ## Tests
 
-Test
+
     
 ## Questions?
 
-spencersalmon.tabitha@gmail.com 
+ 
 
-[https://github.com/TabithaLy](https://github.com/TabithaLy)
+[]()
