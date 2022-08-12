@@ -11,6 +11,7 @@ function readmeOutput (data) {
             data.contentTable[i] = "";
         }
     }
+    // license badges and links
     switch (data.license) {
         case "GNU AGPLv3":
             data.license = "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
@@ -37,7 +38,6 @@ function readmeOutput (data) {
             data.license = "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)";
         break;
     }
-    // attempt at license - will come back to
     return `
 # ${data.title}
     
@@ -46,7 +46,7 @@ function readmeOutput (data) {
 ${data.description}
     
 ## Table of Contents
-    
+
 [${data.contentTable[0].substring(0, 1).toUpperCase() + data.contentTable[0].substring(1)}](#${data.contentTable[0]})\n
 [${data.contentTable[1].substring(0, 1).toUpperCase() + data.contentTable[1].substring(1)}](#${data.contentTable[1]})\n
 [${data.contentTable[2].substring(0, 1).toUpperCase() + data.contentTable[2].substring(1)}](#${data.contentTable[2]})\n
