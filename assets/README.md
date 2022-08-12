@@ -15,9 +15,9 @@ The purpose of this project is to develop a program that permits a user to creat
 
 [License](#license)
 
-[Email](#email)
-
 [Github](#github)
+
+[](#)
 
 [](#)
 
@@ -46,6 +46,6 @@ Answer the questions as you want them to appear in your README.
     
 ## Questions?
 
-spencersalmon.tabitha@gmail.com 
+ 
 
 [https://github.com/TabithaLy](https://github.com/TabithaLy)

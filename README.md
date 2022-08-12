@@ -14,8 +14,6 @@ The purpose of this project is to develop a program that permits a user to creat
 
 [License](#license)
 
-[Email](#email)
-
 [Github](#github)
 
 ## Application Video Link
@@ -35,7 +33,5 @@ Answer the questions as you want them to appear in your README.
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
 ## Questions?
-
-spencersalmon.tabitha@gmail.com 
 
 [https://github.com/TabithaLy](https://github.com/TabithaLy)
