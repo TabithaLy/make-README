@@ -4,6 +4,7 @@ const fs = require('fs');
 
 // Readme format function
 function readmeOutput (data) {
+    // control for if not selected
     for (let i = 0; i < 8; i++) {
         if (!data.contentTable[i]) {
             data.contentTable[i] = "";
@@ -13,6 +14,7 @@ function readmeOutput (data) {
         if (!data.license[j]) {
             data.license[j] = "";
         }
+        // attempt at license - will come back to
         switch (j) {
             case (data.license[0]):
                 data.license[0] = "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
@@ -158,5 +160,7 @@ inquirer.prompt([
 
 // write readme file
 .then((response) => {
-    fs.writeFile('README.md', readmeOutput(response), (error) => {});
+    fs.writeFile('README.md', readmeOutput(response), (error) => {
+        error ? console.error(error) : console.log('Yay! Check your folder for your dynamically generated README.md file');
+    });
 });
