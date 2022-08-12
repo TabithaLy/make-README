@@ -23,7 +23,7 @@ The purpose of this project is to develop a program that permits a user to creat
 [GitHub](#github)
 
 ## Link
-[https://drive.google.com/file/d/1XnrCRLnmz9a8m-48eaqkZLYCuaxtEtM0/view](https://drive.google.com/file/d/1XnrCRLnmz9a8m-48eaqkZLYCuaxtEtM0/view)
+[https://drive.google.com/file/d/1JIee9LfcgmjC_r9anQY0wWaoKfROK9w0/view](https://drive.google.com/file/d/1JIee9LfcgmjC_r9anQY0wWaoKfROK9w0/view)
 
 ## Installation
 
@@ -35,7 +35,7 @@ Answer the questions as you want them to appear in your README.
     
 ## License 
 
-MIT License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
     
 ## Questions?
 
