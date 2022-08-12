@@ -1,57 +1,43 @@
 
-# 
+# Make README
     
 ## Description
     
-
+The purpose of this project is to develop a program that permits a user to creat a professionally formatted README file from the command line using inquirer.The goal is to become comfortable using these new technologies, with the added bonus of creating something that will be useful for future projects.
     
 ## Table of Contents
     
-[description](#description)
+[Description](#description)
 
-[installation](#installation)
+[Installation](#installation)
 
-[usage](#usage)
+[Usage](#usage)
 
-[license](#license)
+[License](#license)
 
-[contributing](#contributing)
+[Contributing](#contributing)
 
-[tests](#tests)
+[Tests](#tests)
 
-[email](#email)
+[Email](#email)
 
-[github](#github)
+[GitHub](#github)
 
 
 ## Installation
 
-
+Type 'node.js' into command line while terminal is open to the correct directory.
     
 ## Usage
     
-
+Answer the questions as you want them to appear in your README.
     
 ## License 
 
-GNU AGPLv3
-
-
-
-
-
-
-
-
-## Contributing
-
-
-    
-## Tests
-
-
+MIT License
     
 ## Questions?
 
+spencersalmon.tabitha@gmail.com 
 
-[]()
+[https://github.com/TabithaLy/make-README](https://github.com/TabithaLy/make-README)

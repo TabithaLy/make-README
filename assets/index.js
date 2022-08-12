@@ -49,14 +49,14 @@ ${data.description}
     
 ## Table of Contents
     
-[${data.contentTable[0]}](#${data.contentTable[0]})\n
-[${data.contentTable[1]}](#${data.contentTable[1]})\n
-[${data.contentTable[2]}](#${data.contentTable[2]})\n
-[${data.contentTable[3]}](#${data.contentTable[3]})\n
-[${data.contentTable[4]}](#${data.contentTable[4]})\n
-[${data.contentTable[5]}](#${data.contentTable[5]})\n
-[${data.contentTable[6]}](#${data.contentTable[6]})\n
-[${data.contentTable[7]}](#${data.contentTable[7]})\n
+[Description](#${data.contentTable[0]})\n
+[Installation](#${data.contentTable[1]})\n
+[Usage](#${data.contentTable[2]})\n
+[License](#${data.contentTable[3]})\n
+[Contributing](#${data.contentTable[4]})\n
+[Tests](#${data.contentTable[5]})\n
+[Email](#${data.contentTable[6]})\n
+[GitHub](#${data.contentTable[7]})\n
 
 ## Installation
 
@@ -87,7 +87,7 @@ ${data.tests}
     
 ## Questions?
 
-${data.email}
+${data.email} \n
 [${data.github}](${data.github})`
 }
 
