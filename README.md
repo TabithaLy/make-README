@@ -18,6 +18,10 @@ The purpose of this project is to develop a program that permits a user to creat
 
 [Github](#github)
 
+## Application Video Link
+
+[https://drive.google.com/file/d/1JIee9LfcgmjC_r9anQY0wWaoKfROK9w0/view](https://drive.google.com/file/d/1JIee9LfcgmjC_r9anQY0wWaoKfROK9w0/view)
+
 ## Installation
 
 Type 'node.js' into command line while terminal is open to the correct directory.
